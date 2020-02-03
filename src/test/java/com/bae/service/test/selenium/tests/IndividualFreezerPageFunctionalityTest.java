@@ -47,7 +47,7 @@ private WebDriver driver;
 	@Test
 	public void test() throws InterruptedException {
 		this.driver.manage().window().setSize(new Dimension(1920,1080));
-		this.driver.get("http://35.176.212.133:8181/FreezerApplication/Freezer.html");
+		this.driver.get(Constants.ip+"/FreezerApplication/Freezer.html");
 		
 		FreezerPage freezerPage = PageFactory.initElements(driver, FreezerPage.class);
 		IndividualFreezerPage iFPage = PageFactory.initElements(driver, IndividualFreezerPage.class);
