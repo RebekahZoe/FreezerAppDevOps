@@ -56,7 +56,7 @@ public class FreezerPageFunctionalityTest {
 		assertEquals("Please enter a valid freezer name (No special characters)",alert2);
 		this.driver.switchTo().alert().accept();
 		freezerPage.clearAddInput();
-		Thread.sleep(2000);
+		Thread.sleep(2000); 
 		
 		freezerPage.createFreezer(shortCharacterCount);
 		String alert3 = this.driver.switchTo().alert().getText();
