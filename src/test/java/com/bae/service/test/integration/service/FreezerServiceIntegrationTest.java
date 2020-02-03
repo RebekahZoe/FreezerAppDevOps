@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.assertj.core.util.Arrays;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -51,7 +52,6 @@ public class FreezerServiceIntegrationTest {
 		this.testFreezerWithID = this.repo.save(this.testFreezer);
 		this.toUpdate = this.repo.save(this.testFreezer);
 		this.item = new Items("curry",2);
-
 		this.item.setId(5L);
 
 		toUpdate.getItems().add(item);
@@ -87,4 +87,9 @@ public class FreezerServiceIntegrationTest {
 	public void testGetItemsFromFreezer() throws FreezerDoesntexistException {
 		assertThat(this.service.getItemsFromFreezer(this.toUpdate.getId())).isEqualTo(freezerWithItem.getItems());
 	}
+
+@After
+public void teardown() {
+	
+}
 }
