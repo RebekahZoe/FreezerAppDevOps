@@ -1,15 +1,7 @@
 pipeline {
   agent any
   stages {
-   
-    stage ('----Docker permissions----'){
-      steps{
-        sh "sudo systemctl start docker"
-        sh "sudo systemctl enable docker"
-        sh "sudo usermod -aG docker $USER"
-        sh "sudo setfacl -m user:ubuntu:rw /var/run/docker.sock"
-      }
-    }
+
     stage('---- Do Dockerfile----'){
       steps{
         sh " touch Dockerfile"
