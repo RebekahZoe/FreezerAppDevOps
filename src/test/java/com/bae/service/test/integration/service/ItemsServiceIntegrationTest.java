@@ -1,7 +1,7 @@
 package com.bae.service.test.integration.service;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
 import org.assertj.core.util.Arrays;
 import org.junit.Before;
