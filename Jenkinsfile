@@ -58,5 +58,10 @@ ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]' > Dockerfile"""
 		}
 	   }
    }
+	  stage('----nexus----'){
+		  steps{
+			  sh "mvn deploy"
+		  }
+	  }
  }
 }
