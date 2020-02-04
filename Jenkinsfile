@@ -2,19 +2,19 @@ pipeline {
   agent any
   stages {
     
-    stage('----mysql----'){
-      steps{
-        sh "docker network create freezer-network"
+ //   stage('----mysql----'){
+    //  steps{
+     //   sh "docker network create freezer-network"
 
-        sh "docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest"
+      //  sh "docker run -p 3306:3306 --name mysql -e MYSQL_ROOT_PASSWORD=root -d mysql:latest"
 
-        sh "docker network connect freezer-network mysql"
+       // sh "docker network connect freezer-network mysql"
 
-        sh "sleep 30s"
+      //  sh "sleep 30s"
 
-        sh "docker container run -it --network freezer-network --rm mysql mysql -hmysql -u root -proot -e 'create database freezerdb;'"
-      }
-    }
+       // sh "docker container run -it --network freezer-network --rm mysql mysql -hmysql -u root -proot -e 'create database freezerdb;'"
+      //}
+    //}
 
     stage('---- Do Dockerfile----'){
       steps{
