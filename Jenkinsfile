@@ -21,6 +21,7 @@ pipeline {
    }
     stage('----build dockerfile----'){
       steps{
+	      sh " touch Dockerfile"
         sh """# build from the Maven image
 # which has a maven environment configured already
 FROM maven:latest
@@ -41,7 +42,7 @@ WORKDIR /FreezerAppDevOps
 # build stage to the application folder in this build stage
 COPY --from=0 /FreezerAppDevOps/target/*.jar app.jar
 # create an entrypoint to run the application
-ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]"""
+ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"] > Dockerfile"""
       }
     }
     
