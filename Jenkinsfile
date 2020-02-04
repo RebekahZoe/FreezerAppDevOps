@@ -14,7 +14,7 @@ pipeline {
             # the application
             WORKDIR /FreezerAppDevOps
             # use maven to build the application
-            RUN mvn clean package -DskipTests
+            RUN mvn clean package 
             # create a new build stage from the Java image
             # which has java installed already
             FROM openjdk:8-jdk-alpine
