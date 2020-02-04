@@ -79,22 +79,18 @@
         
     </dependencies>
 
-	 <repositories>
-    <repository>
-        <id>mvnGroup</id>
-        <url>http://3.11.84.155:8081/repository/freezer-hosted/</url>
-    </repository>
-</repositories>
-<distributionManagement>
-    <snapshotRepository>
-        <id>nexus-snapshots</id>
-        <url>http://3.11.84.155:8081/repository/freezer-hosted/</url>
-    </snapshotRepository>
-    <repository>
-        <id>nexus-releases</id>
-        <url>http://3.11.84.155:8081/repository/freezer-hosted/</url>
-    </repository>
-</distributionManagement>
+	 <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <name>maven-releases</name>
+            <url>http://3.11.84.155:8081/repository/freezer-hosted/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <name>maven-snapshots</name>
+            <url>http://3.11.84.155:8081/repository/freezer-hosted/</url>
+        </snapshotRepository>
+    </distributionManagement>
 	
     <build>
 
