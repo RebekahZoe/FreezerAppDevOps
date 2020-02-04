@@ -8,11 +8,11 @@ pipeline {
     }
    }
     
-    stage('----mvn test----'){
-    steps{
-      sh "mvn test"
-    }
-    }
+   // stage('----mvn test----'){
+    //steps{
+     // sh "mvn test"
+   // }
+    //}
     
     stage('----mvn package----'){
     steps{
