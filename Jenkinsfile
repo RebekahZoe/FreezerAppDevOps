@@ -31,7 +31,6 @@ pipeline {
     
    stage('----Build Image For Application----'){
     steps{
-      sh "sudo setfacl -m user:ubuntu:rw /var/run/docker.sock"
       sh "docker build -t freezer-app ."
     }
    }
