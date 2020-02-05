@@ -63,6 +63,10 @@ ENTRYPOINT ["/usr/bin/java", "-jar","-Dspring.profiles.active=prod", "app.jar"]'
 			  sh "mvn deploy"
 		  }
 	  }
-	
+	stage ('---ssh---'){
+		  steps{
+			  sh "ssh -T -i /home/jenkins/FreezerProd.pem ubuntu@ec2-18-130-245-239.eu-west-2.compute.amazonaws.com ./build.sh"
+		  }
+	  }
  }
 }
