@@ -48,7 +48,7 @@ ENTRYPOINT ["/usr/bin/java", "-jar","-Dspring.profiles.active=prod", "app.jar"]'
     
     stage('----Build Image For Application----'){
     steps{
-      sh "docker build -t rebekahzoe/freezerappbe:latest ."
+      sh "docker build -t rebekahzoe/freezerappbeprod:latest ."
     }
    }
    stage('----Push to dockerhub----'){
