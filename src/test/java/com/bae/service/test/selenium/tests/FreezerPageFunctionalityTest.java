@@ -35,7 +35,7 @@
 //	@Test
 //	public void test() throws InterruptedException {
 //		this.driver.manage().window().setSize(new Dimension(1600,700));
-//		this.driver.get("http://35.176.212.133:8181/FreezerApplication/Freezer.html");
+//		this.driver.get(Constants.ip+"/FreezerApplication/Freezer.html");
 //		
 //		FreezerPage freezerPage = PageFactory.initElements(driver, FreezerPage.class);
 //		assertFalse(freezerPage.emptyFreezer());
@@ -56,7 +56,7 @@
 //		assertEquals("Please enter a valid freezer name (No special characters)",alert2);
 //		this.driver.switchTo().alert().accept();
 //		freezerPage.clearAddInput();
-//		Thread.sleep(2000);
+//		Thread.sleep(2000); 
 //		
 //		freezerPage.createFreezer(shortCharacterCount);
 //		String alert3 = this.driver.switchTo().alert().getText();
