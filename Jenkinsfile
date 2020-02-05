@@ -54,7 +54,7 @@ ENTRYPOINT ["/usr/bin/java", "-jar","-Dspring.profiles.active=prod", "app.jar"]'
    stage('----Push to dockerhub----'){
 	   steps{
 		withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
-		sh "docker push rebekahzoe/freezerappbe:latest"
+		sh "docker push rebekahzoe/freezerappbeprod:latest"
 		}
 	   }
    }
