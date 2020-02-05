@@ -42,7 +42,7 @@ WORKDIR /FreezerAppDevOps
 # build stage to the application folder in this build stage
 COPY --from=0 /FreezerAppDevOps/target/*.jar app.jar
 # create an entrypoint to run the application
-ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]' > Dockerfile"""
+ENTRYPOINT ["/usr/bin/java", "-jar","-Dspring.profiles.active=dev", "app.jar"]' > Dockerfile"""
       }
     }
     
