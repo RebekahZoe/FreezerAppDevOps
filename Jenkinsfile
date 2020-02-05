@@ -65,7 +65,7 @@ ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]' > Dockerfile"""
 	  }
 	  stage('----adding build number----'){
 		  steps{
-			  withCredentials([ credentialsId: "freezerTest.pem", usernameVariable: "", passwordVariable: ""]) {
+			  withCredentials(usernamePassword[ credentialsId: "freezerTest.pem", usernameVariable: "", passwordVariable: ""]) {
 			  sh "ssh -i 'freezerTest.pem' ubuntu@ec2-35-176-215-25.eu-west-2.compute.amazonaws.com -y"
 			  sh "export BuildNumber = $BUILD_NUMBER"
 			  }
