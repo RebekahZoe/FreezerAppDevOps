@@ -65,7 +65,7 @@ ENTRYPOINT ["/usr/bin/java", "-jar","-Dspring.profiles.active=dev", "app.jar"]' 
 	  }
 	  stage ('---ssh---'){
 		  steps{
-			  sh "ssh -T -i /home/jenkins/freezerTest.pem ubuntu@ec2-3-10-190-113.eu-west-2.compute.amazonaws.com ./build.sh"
+			  sh "ssh -T -i /home/jenkins/freezerTest.pem ubuntu@ec2-3-8-126-206.eu-west-2.compute.amazonaws.com ./build.sh"
 		  }
 	  }
  }
