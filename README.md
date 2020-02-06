@@ -28,7 +28,7 @@ We created our own VPC with Subnets in the London Region
 
 We created a custom security group called WebServerSG where you can only SSH into the VM's or the Database from either our own IP or from our Jenkins VM and only required ports opened.
 
-IMAGE
+<a href="https://ibb.co/KhtZZg2"><img src="https://i.ibb.co/tK0ff6q/Untitled-Diagram.png" alt="Untitled-Diagram" border="0"></a>
 
 <a name="Git"></a>
 ### Git
